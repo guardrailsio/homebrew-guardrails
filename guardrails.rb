@@ -5,21 +5,21 @@
 class Guardrails < Formula
   desc ""
   homepage "https://www.guardrails.io/"
-  version "0.2.0"
+  version "0.1.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/guardrailsio/guardrails-cli/releases/download/v0.2.0/guardrails_v0.2.0_darwin_x86_64.tar.gz"
-      sha256 "469c6d60bd98b2d4fc3f95b5056628ea06a5103d2d7912fc9e5fc6c60b9bc555"
+      url "https://github.com/guardrailsio/guardrails-cli/releases/download/v0.1.0/guardrails_v0.1.0_darwin_x86_64.tar.gz"
+      sha256 "c0ad4228f641caff4eeab44c62c0457404187e86df6a3eeb0f1c64badd3ef836"
 
       def install
         bin.install "guardrails-cli"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/guardrailsio/guardrails-cli/releases/download/v0.2.0/guardrails_v0.2.0_darwin_arm64.tar.gz"
-      sha256 "2f121936e01e0d0d6082481d3a498213ff23e723914a878c87813c54337f1fd8"
+      url "https://github.com/guardrailsio/guardrails-cli/releases/download/v0.1.0/guardrails_v0.1.0_darwin_arm64.tar.gz"
+      sha256 "6f763cf5d3b83effb0dcf1f914a4c495b1db866a39aa33439d052ba6b1b23d8f"
 
       def install
         bin.install "guardrails-cli"
@@ -29,16 +29,16 @@ class Guardrails < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/guardrailsio/guardrails-cli/releases/download/v0.2.0/guardrails_v0.2.0_linux_arm64.tar.gz"
-      sha256 "ea58f85926ad722295bb0dbaf59b4871a21e97d2b5c6edd78cf3f813967973e5"
+      url "https://github.com/guardrailsio/guardrails-cli/releases/download/v0.1.0/guardrails_v0.1.0_linux_arm64.tar.gz"
+      sha256 "44ae8ea68923487935d23e0e9b94c0c163944622be9fe3c857c6a7b184a2f060"
 
       def install
         bin.install "guardrails-cli"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/guardrailsio/guardrails-cli/releases/download/v0.2.0/guardrails_v0.2.0_linux_x86_64.tar.gz"
-      sha256 "a05ecd9b6d2d5ea02a47bdc9b0612e3b48f66a1f191ac26c1011ad345c36cdf8"
+      url "https://github.com/guardrailsio/guardrails-cli/releases/download/v0.1.0/guardrails_v0.1.0_linux_x86_64.tar.gz"
+      sha256 "72fd10398f55b81e2d06b92e51def0b8d1e05b1b06f6895c3e64c9cb19774c1c"
 
       def install
         bin.install "guardrails-cli"
