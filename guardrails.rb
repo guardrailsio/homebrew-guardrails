@@ -9,17 +9,17 @@ class Guardrails < Formula
   license "Apache-2.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/guardrailsio/guardrails-cli/releases/download/v0.1.0/guardrails_v0.1.0_darwin_arm64.tar.gz"
-      sha256 "164e1a3a5122c7f8131c9079d4c966bf6449b6238ec87a28ad63d1db7f4bb3a0"
+    if Hardware::CPU.intel?
+      url "https://github.com/guardrailsio/guardrails-cli/releases/download/v0.1.0/guardrails_v0.1.0_darwin_x86_64.tar.gz"
+      sha256 "eb79add22410eea10af72fad7565e29596cd72ec6b9a5ea23faf352bf773b3e7"
 
       def install
         bin.install "guardrails-cli"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/guardrailsio/guardrails-cli/releases/download/v0.1.0/guardrails_v0.1.0_darwin_x86_64.tar.gz"
-      sha256 "58ef1f0601b6730684588ae0bc3e00c976e75320601f1ca84810db745f31b657"
+    if Hardware::CPU.arm?
+      url "https://github.com/guardrailsio/guardrails-cli/releases/download/v0.1.0/guardrails_v0.1.0_darwin_arm64.tar.gz"
+      sha256 "886cceeab8da4796b0b8f737150b8b690b7d1b1c04a52c9435b58cd80be063a0"
 
       def install
         bin.install "guardrails-cli"
@@ -30,7 +30,7 @@ class Guardrails < Formula
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/guardrailsio/guardrails-cli/releases/download/v0.1.0/guardrails_v0.1.0_linux_x86_64.tar.gz"
-      sha256 "89c77fcdb476520d6b1ce72109f3bb43605a33b99c2475c1974b0249e95c031f"
+      sha256 "a5fa6230654264ee5e90075475564bc1a7ff353bb84d2165d69f1597902a2a73"
 
       def install
         bin.install "guardrails-cli"
@@ -38,7 +38,7 @@ class Guardrails < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/guardrailsio/guardrails-cli/releases/download/v0.1.0/guardrails_v0.1.0_linux_arm64.tar.gz"
-      sha256 "349c7b7c5b1ada9a3951a96187915620c1a959e4d6c6c03927307bbc98373968"
+      sha256 "205e74739d372f6b336c8622a8d758ea0ea3e5c037b52d558483f6f60caee9f0"
 
       def install
         bin.install "guardrails-cli"
