@@ -11,7 +11,7 @@ class Guardrails < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/guardrailsio/guardrails-cli/releases/download/v0.1.0/guardrails_v0.1.0_darwin_x86_64.tar.gz"
-      sha256 "c0ad4228f641caff4eeab44c62c0457404187e86df6a3eeb0f1c64badd3ef836"
+      sha256 "87faef2de9742283d7e757fa0424ab2ab3b0c32138198af8253863e613732b2c"
 
       def install
         bin.install "guardrails-cli"
@@ -19,7 +19,7 @@ class Guardrails < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/guardrailsio/guardrails-cli/releases/download/v0.1.0/guardrails_v0.1.0_darwin_arm64.tar.gz"
-      sha256 "6f763cf5d3b83effb0dcf1f914a4c495b1db866a39aa33439d052ba6b1b23d8f"
+      sha256 "e45b09a12688694766c146df7c5fbaf7e080e84ab57975b790ed5c7b926b584b"
 
       def install
         bin.install "guardrails-cli"
@@ -28,17 +28,17 @@ class Guardrails < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/guardrailsio/guardrails-cli/releases/download/v0.1.0/guardrails_v0.1.0_linux_arm64.tar.gz"
-      sha256 "44ae8ea68923487935d23e0e9b94c0c163944622be9fe3c857c6a7b184a2f060"
+    if Hardware::CPU.intel?
+      url "https://github.com/guardrailsio/guardrails-cli/releases/download/v0.1.0/guardrails_v0.1.0_linux_x86_64.tar.gz"
+      sha256 "250c7800e2c6eab4dcb6f66b51fdea95f355f427fd32c8c1ec84c296f4509b3a"
 
       def install
         bin.install "guardrails-cli"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/guardrailsio/guardrails-cli/releases/download/v0.1.0/guardrails_v0.1.0_linux_x86_64.tar.gz"
-      sha256 "72fd10398f55b81e2d06b92e51def0b8d1e05b1b06f6895c3e64c9cb19774c1c"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/guardrailsio/guardrails-cli/releases/download/v0.1.0/guardrails_v0.1.0_linux_arm64.tar.gz"
+      sha256 "89bc6e115df8a3a10a8f8cd62438a8ebed5e59161bde5ce7fc5f087822cee8f8"
 
       def install
         bin.install "guardrails-cli"
