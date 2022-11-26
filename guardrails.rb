@@ -9,17 +9,17 @@ class Guardrails < Formula
   license "Apache-2.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/guardrailsio/guardrails-cli/releases/download/v0.1.0/guardrails_v0.1.0_darwin_x86_64.tar.gz"
-      sha256 "0a0afdf7809609297bfd20dd4ca997bda358bcfe683bbdd807e6c9d159f0611a"
+    if Hardware::CPU.arm?
+      url "https://github.com/guardrailsio/guardrails-cli/releases/download/v0.1.0/guardrails_v0.1.0_darwin_arm64.tar.gz"
+      sha256 "8943abd98bda77d34107a57ed8de9199f6aa99af051f1f9f0dd14ee407c5b4bd"
 
       def install
         bin.install "guardrails-cli"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/guardrailsio/guardrails-cli/releases/download/v0.1.0/guardrails_v0.1.0_darwin_arm64.tar.gz"
-      sha256 "89a85d084bf022c97e97fae6d05cf821d9cd7f49d3808b22e7a440922986801d"
+    if Hardware::CPU.intel?
+      url "https://github.com/guardrailsio/guardrails-cli/releases/download/v0.1.0/guardrails_v0.1.0_darwin_x86_64.tar.gz"
+      sha256 "563e0373bb04d3d6188cd371e6e98e0670eb72b5fa4cf0ecfd651c2139b730d0"
 
       def install
         bin.install "guardrails-cli"
@@ -28,17 +28,17 @@ class Guardrails < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/guardrailsio/guardrails-cli/releases/download/v0.1.0/guardrails_v0.1.0_linux_arm64.tar.gz"
-      sha256 "00f7f27d716c81e6bc30bf00ea8d581e060e051e466a65ff6565053f841894b1"
+    if Hardware::CPU.intel?
+      url "https://github.com/guardrailsio/guardrails-cli/releases/download/v0.1.0/guardrails_v0.1.0_linux_x86_64.tar.gz"
+      sha256 "94260884c07618bc82787a64a6e10855b079ee8e76dc8e7d02369bc80efd3147"
 
       def install
         bin.install "guardrails-cli"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/guardrailsio/guardrails-cli/releases/download/v0.1.0/guardrails_v0.1.0_linux_x86_64.tar.gz"
-      sha256 "1940bb4fec8e20e1493c759b87e9c1d38ad2c01d710625a88a6cb6e637cf02e6"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/guardrailsio/guardrails-cli/releases/download/v0.1.0/guardrails_v0.1.0_linux_arm64.tar.gz"
+      sha256 "2a6bdf33e418502deab3f058f2c91f21fbd7e0459ab0f1247a9099f84677e29f"
 
       def install
         bin.install "guardrails-cli"
